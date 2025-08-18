@@ -1,0 +1,88 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+
+<crowd-form>
+  <crowd-classifier 
+    name="citation-contexts"
+    categories="['Positive',	
+	'Neutral', 
+	'Negative']"
+    header="Select the most relevant category for below context. For examples see Instructions"
+  >
+    
+	<classification-target>
+
+<p style="color:#348aa7;margin:0px;"><small>Select the most relevant category for this context from the categories given below. See <b>Instructions</b> for examples. </small></p>
+<h4 style="margin:2px;">Context <span style='font-size:20px;'>&#11175;</span> </h4>
+<div style="background-color: #b3d6c6;padding:5px;margin-top:5px">
+<p style="color:#011936">${context} [${file_key}] [${first_author}] [${index}]
+</p>
+</div>
+<br>
+	<div style="background-color: #e9edc9;padding:5px; font-size:0.8rem;">
+	<h2 style="margin-top:0px">Categories (class labels):</h2>
+	  <ol>
+		  <li><strong style="color:#008000">Positive :</strong> Containing positive reproducibility effort related  words like reproduce, replicate, or repeat the experiments OR the software/process was used for preprocessing or comparison</li>
+		  <li><strong style="color:#38a3a5">Neutral :</strong> Simply mentioning the cited paper without any attempts to run the implementation or verify the results</li>
+		  <li><strong style="color:#da2c38">Negative :</strong> An unsuccessful attempt to reproduce the reported results OR an unsuccessful attempt to redo the experiments due to the unavailability of resources</li>
+      </ol>
+	</div><br><br><br>
+	
+    </classification-target>
+
+    <full-instructions header="Citation Context Classification based on the implications towards the reproducibility of the cited paper">
+      Below are the related key terms...
+      
+      <ul>
+        <li><b>Citation :</b> In a research paper, a citation is a reference to a source of information that the author has consulted and used to support their arguments, findings, or assertions.</li><br>
+        <li><b>Citation Context :</b> A citation context refers to the surrounding text or content in which a particular citation occurs within a document, such as a research paper, article, or book. It includes the sentences or paragraphs that precede and follow the citation, providing the context within which the referenced work is mentioned. <br>The citation context provides clues about why the cited paper is being referenced, how it relates to the topic at hand, and what specific aspect of the cited paper is being discussed or utilized in the current document. Analyzing the citation context helps readers to interpret the citation more accurately, evaluate its credibility, and comprehend its role within the broader discourse of the field or subject matter. Additionally, citation contexts can provide insights into the author's argumentation, the current state of research, and potential directions for further exploration or investigation.
+        </li><br>
+        <li><b>Cited Paper :</b> A cited paper refers to a document, typically a scholarly article that has been referenced or cited in another work. When authors conduct research or write academic papers, they often refer to existing literature to support their arguments, provide evidence, or build upon previous findings. These references are indicated within the text of the new paper (citing paper) , typically in the form of citations (citation contexts).</li><br>
+      </ul>
+      
+    </full-instructions>
+
+    <short-instructions>
+     <div><p style="color:#222e50"><b>This is a Text Classification (Single Label) task. You need to choose the best category (label) from the provided five options for the given citation context that hints at the reproducibility of the cited paper.</b></p>	<p style="color:#ba0c0c;margin-bottom:5px;"><small>When there are multiple (Author, Year) citation marks available in the context, you can determine the corresponding citation mark by looking at the provided <span style="color:black"><b>"[First Author: Author Last Name]"</b></span> or <span style="color:black"><b>"[Cited Paper: (Author, Year) citation mark]"</b></span> as the second to last bracket of the context. <br><br>Please ignore the last part of the context <span style="color:black"><b>"[id:RS_*****]"</b></span> as it is not related to the context you need to label. For terminology please see "More Instructions".</small></p></div>
+	 
+      
+      	<div style="background-color: #f4fdaf;padding:5px">
+      	  Below are some of the citation contexts examples with the classfied category based on the context realativity towards the reproducibility of the cited paper.
+	<h3>categories:</h3>
+	  <ol>
+		  <li><strong style="color:#008000">Positive :</strong> Containing positive reproducibility effort related  words like reproduce, replicate, or repeat the experiments OR the software/process was used for preprocessing or comparison</li>
+  		  <div>Examples:
+  		    <ol>
+            <li>We present a replication study of BERT pretraining (Devlin et al., 2019), which includes a careful evaluation of the effects of hyperparameter tuning and training set size. - <b>Positive</b></li>
+            <li>Our code is adapted from (Tian et al., 2021) 5, and we follow the same data augmentation process.   [id:RS_062_MLRC_2021_17] [first author: Tian]  - <b>Positive</b></li>
+            <li>For this, we reproduced an experiment by Antoniak and Mimno [1] ranking the cosine similarity between the first Principal Component (PC) of the bias subspace and all words in the corpus.   [id:RS_085_MLRC_2021_40] [first author: Antoniak] - <b>Positive</b></li>
+            <li>To further demonstrate the effectiveness of BiasAdv, we evaluated the model robustness to various input corruptions following the protocol [29].   [id:RS_008_MLRC_2022_08] [first author: Lim] - <b>Positive</b></li>
+          </ol>
+  		  </div>
+		  <br>
+		  <li><strong style="color:#38a3a5">Neutral :</strong> Simply mentioning the cited paper without any attempts to run the implementation or verify the results</li>
+  		  <div>Examples:
+  		    <ol>
+            <li>Pre-training methods that learn directly from raw text have revolutionized NLP over the last few years (Devlin et al., 2018). - <b>Neutral</b></li>
+            <li>Please refer to [18] for detailed explanations.   [id:RS_008_MLRC_2022_08] [first author: Lim] - <b>Neutral</b></li>
+            <li>As aforementioned, triplet loss is a seminar example and classical design in this field [18], which has spawned a lot of elegant works.   [id:RS_008_MLRC_2022_08] [first author: Lim] - <b>Neutral</b></li>
+          </ol>
+  		  </div>
+		  <br>		  
+		  <li><strong style="color:#ee6055">Negative :</strong> An unsuccessful attempt to reproduce the reported results OR an unsuccessful attempt to redo the experiments due to the unavailability of resources</li>
+  		  <div>Examples:
+  		    <ol>
+            <li>Dataset source or location was not provided in [38]. - <b>Negative</b></li>
+            <li>(Schreiber et al., 2018) uses a different, non-public 50 % random subset.   [id:RS_134_ICDAR_2018_01] [first author: Schreiber] - <b>Negative</b></li>
+            <li>However, we were unable to obtain reasonable performance, even after exploring a variety of values for post processing thresholds and training hyperparameters (values not specified in [6]).   [id:RS_134_ICDAR_2018_01] [first author: Schreiber] - <b>Negative</b></li>
+            <li>The source codes of 6 papers were not executable [30, 33, 34, 36, 38, 39].   [id:RS_137_ICDAR_2018_04] [first author: Qasim] - <b>Negative</b></li>
+          </ol>
+  		  </div>
+		  <br>		  		  
+      </ol>
+	</div>
+    </short-instructions>
+
+  </crowd-classifier>
+  
+</crowd-form>
