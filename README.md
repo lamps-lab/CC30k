@@ -1,7 +1,6 @@
 # CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis 
 
-This repository contains the files and code we used to prepare the CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis. This is an extended work of our initial project [<b>"Can citations tell us about a paper’s reproducibility? A
-case study of machine learning papers"</b>](https://github.com/lamps-lab/ccair-ai-reproducibility).
+This repository contains the files and code we used to prepare the CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis. 
 
 ## Folder structure 
 ```
