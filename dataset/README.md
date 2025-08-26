@@ -4,7 +4,7 @@ The CC30k dataset consists of labeled citation contexts obtained through crowdso
 
 ## Dataset Description
 
-The CC30k dataset is unique in its focus on **reproducibility-oriented sentiments (ROS)** within scientific literature. This introduces a novel approach to studying computational reproducibility by leveraging citation contexts, which are textual fragments in scientific papers that reference prior work. This dataset comprises 30,829 labeled citation contexts from scientific literature published at AI venues, each annotated with one of three ROS labels: `positive`, `negative`, or `neutral`. These labels reflect the cited work's perceived reproducibility. The dataset contains ROS labeled contexts along with metadata about the workers, reproducibility study, related original paper, and citing paper, and the final aggregated labels. The columns in the dataset are detailed in the table below:  The columns in the dataset are detailed in the table below:  
+The CC30k dataset is unique in its focus on **reproducibility-oriented sentiments (ROS)** within scientific literature. This introduces a novel approach to studying computational reproducibility by leveraging citation contexts, which are textual fragments in scientific papers that reference prior work. This dataset comprises 30,734 labeled citation contexts from scientific literature published at AI venues, each annotated with one of three ROS labels: `positive`, `negative`, or `neutral`. These labels reflect the cited work's perceived reproducibility. The dataset contains ROS labeled contexts along with metadata about the workers, reproducibility study, related original paper, and citing paper, and the final aggregated labels. The columns in the dataset are detailed in the table below:  The columns in the dataset are detailed in the table below:  
 
 
 | **Column Name**               | **Description** |
@@ -23,7 +23,7 @@ The CC30k dataset is unique in its focus on **reproducibility-oriented sentiment
 | `label_w2`              | Label assigned by the second worker. |
 | `label_w3`              | Label assigned by the third worker. |
 | `batch`                 | Batch number for the posted Mechanical Turk job. |
-| `majority_vote`         | Final label based on the majority vote among workers’ labels. |
+| `majority_vote`         | Final label based on the majority vote among workers’ labels (reproducibility-oriented sentiment: `Positive`, `Negative`, or `Neutral`). |
 | `majority_agreement`    | Indicates how many of the three workers agreed on the final majority vote. |
 | `rs_doi`               | Digital Object Identifier (DOI) of the reproducibility study paper. |
 | `rs_title`             | Title of the reproducibility study paper. |
@@ -40,11 +40,14 @@ The CC30k dataset is unique in its focus on **reproducibility-oriented sentiment
 | `org_venue`           | Venue where the original (cited) paper was published. |
 | `org_paper_url`        | URL to access the original (cited) paper. |
 | `org_citations`        | Number of citations received by the original (cited) paper. |
+| `org_s2ga_id`        | Semantic Scholar Graph API ID of the original (cited) paper. |
 | `citing_doi`          | DOI of the citing paper that cited the original (cited) paper. |
 | `citing_year`         | Publication year of the citing paper. |
 | `citing_venue`        | Venue where the citing paper was published. |
 | `citing_title`        | Title of the citing paper. |
 | `citing_authors`      | List of authors of the citing paper. |
+| `citing_s2ga_id`      | Semantic Scholar Graph API ID of the citing paper. |
+| `label_type`      | Label source: `crowdsourcing` or `augmented_human_validated` or `augmented_machine_labeled`. |
 
 
 
