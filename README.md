@@ -9,6 +9,7 @@ This repository contains the files and code we used to prepare the CC30k: A Cita
     ├── figures           # Visualizations stored location
     ├── labeling-gui      # GUI used for crowd-sourcing
     ├── notebooks         # .ipynb notebook files
+    ├── scripts           # Scripts to reproduce the llm fine-tuning results
     └── README.md
 ```
 
@@ -112,5 +113,5 @@ Available inside `notebooks` directory.
 
 ```
 Rochana R. Obadage
-08/18/2025
+08/26/2025
 ```
