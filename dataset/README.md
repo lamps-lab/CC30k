@@ -47,7 +47,7 @@ The CC30k dataset is unique in its focus on **reproducibility-oriented sentiment
 | `citing_title`        | Title of the citing paper. |
 | `citing_authors`      | List of authors of the citing paper. |
 | `citing_s2ga_id`      | Semantic Scholar Graph API ID of the citing paper. |
-| `label_type`      | Label source: `crowdsourcing` or `augmented_human_validated` or `augmented_machine_labeled`. |
+| `label_type`      | Label source: `crowdsourced` or `augmented_human_validated` or `augmented_machine_labeled`. |
 
 
 

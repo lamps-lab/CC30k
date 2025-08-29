@@ -29,7 +29,7 @@ All the required dependencies included in the `requirements.txt` file.
 * matplotlib==3.8.0
 
 ## Dataset ##
-The CC30k dataset consists of labeled citation contexts obtained through crowdsourcing. Each context is labeled by three independent workers. This README describes the structure and columns of the dataset.
+The CC30k dataset consists of labeled citation contexts obtained primarily through crowdsourcing, where each context is annotated by three independent workers. In addition, the dataset includes augmented negative labels generated to extend the coverage of negative citation contexts. This README describes the structure and columns of the dataset.
 
 Available in the `dataset` directory
 
@@ -37,7 +37,7 @@ Available in the `dataset` directory
 
 ### Dataset Description
 
-The CC30k dataset is unique in its focus on **reproducibility-oriented sentiments (ROS)** within scientific literature. This introduces a novel approach to studying computational reproducibility by leveraging citation contexts, which are textual fragments in scientific papers that reference prior work. This dataset comprises 30,734 labeled citation contexts from scientific literature published at AI venues, each annotated with one of three ROS labels: `Positive`, `Negative`, or `Neutral`. These labels reflect the cited work's perceived reproducibility. The dataset contains ROS labeled contexts along with metadata about the workers, reproducibility study, related original paper, and citing paper, and the final aggregated labels. The columns in the dataset are detailed in the table below:  
+The CC30k dataset is unique in its focus on **reproducibility-oriented sentiments (ROS)** within scientific literature. This introduces a novel approach to studying computational reproducibility by leveraging citation contexts, which are textual fragments in scientific papers that reference prior work. This dataset comprises 30,734 labeled citation contexts from scientific literature published at AI venues, each annotated with one of three ROS labels: `Positive`, `Negative`, or `Neutral`. These labels reflect the cited work's perceived reproducibility. The dataset contains ROS labeled contexts along with metadata about the workers, reproducibility study, related original paper, citing paper, the final aggregated labels and the label type. The columns in the dataset are detailed in the table below:  
 
 
 | **Column Name**               | **Description** |
@@ -80,7 +80,7 @@ The CC30k dataset is unique in its focus on **reproducibility-oriented sentiment
 | `citing_title`        | Title of the citing paper. |
 | `citing_authors`      | List of authors of the citing paper. |
 | `citing_s2ga_id`      | Semantic Scholar Graph API ID of the citing paper. |
-| `label_type`      | Label source: `crowdsourcing` or `augmented_human_validated` or `augmented_machine_labeled`. |
+| `label_type`      | Label source: `crowdsourced` or `augmented_human_validated` or `augmented_machine_labeled`. |
 
 
 ## Jupyter Notebook Descriptions ##
@@ -94,7 +94,10 @@ Available inside `notebooks` directory.
 	- Used to communicate with MTurk workers.
 
 - **R001_AWS_MTurk_process_results.ipynb**
-	- Used to process crowd-sourced results from MTurk.
+	- Used to process crowdsourced results from MTurk.
+
+- **R001_Extend_CC25k_Dataset.ipynb**
+	- Used to extend the crowdsourced labels with newly augmented ROS: Negative contexts.
 
 - **R_001_Creating_the_RS_superset.ipynb**
 	- Used to collect the original and reproducibility studies.
