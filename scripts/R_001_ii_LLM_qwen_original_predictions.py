@@ -5,6 +5,7 @@ import os
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 from sklearn.metrics import classification_report
+from dotenv import load_dotenv
 
 
 # ========== Config ==========
@@ -12,8 +13,8 @@ base_model = "Qwen/Qwen1.5-7B-Chat"
 test_file = "cc25k/test_244_gt.csv"
 
 # ========== Authentication ==========
-os.environ["HF_TOKEN"] = "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"
-auth_token = os.environ["HF_TOKEN"]
+load_dotenv()
+auth_token = os.getenv("HF_TOKEN")
 
 # ========== Tokenizer ==========
 tokenizer = AutoTokenizer.from_pretrained(base_model, trust_remote_code=True, token=auth_token)

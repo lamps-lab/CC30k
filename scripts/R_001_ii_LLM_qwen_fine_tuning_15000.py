@@ -5,10 +5,11 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import get_peft_model, LoraConfig, TaskType
 from trl import SFTTrainer, SFTConfig
+from dotenv import load_dotenv
 
 # ========== Authentication ==========
-os.environ["HF_TOKEN"] = "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"
-auth_token = os.environ["HF_TOKEN"]
+load_dotenv()
+auth_token = os.getenv("HF_TOKEN")
 
 # ========== Model and Tokenizer ==========
 model_name = "Qwen/Qwen1.5-7B-Chat"
