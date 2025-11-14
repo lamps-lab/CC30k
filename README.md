@@ -111,10 +111,18 @@ Available inside `notebooks` directory.
 <!-- ## Citation ## -->
 
 ```BibTeX
-
+@misc{obadage2025cc30kcitationcontextsdataset,
+      title={CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis}, 
+      author={Rochana R. Obadage and Sarah M. Rajtmajer and Jian Wu},
+      year={2025},
+      eprint={2511.07790},
+      archivePrefix={arXiv},
+      primaryClass={cs.DL},
+      url={https://arxiv.org/abs/2511.07790}, 
+}
 ```
 
 ```
 Rochana R. Obadage
-11/10/2025
+11/14/2025
 ```
