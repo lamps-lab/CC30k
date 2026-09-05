@@ -1,5 +1,15 @@
 # CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis 
 
+<p align="left">
+  <a href="https://ieeexplore.ieee.org/document/11363696/">
+    <img src="https://img.shields.io/badge/Published_Paper-Read_Now-2ea44f?style=flat-square&logo=readthedocs&logoColor=white" alt="Published Paper">
+  </a> 
+    
+  <a href="https://arxiv.org/pdf/2511.07790">
+    <img src="https://img.shields.io/badge/Preprint-arXiv-B31B1B?style=flat-square&logo=arxiv&logoColor=white" alt="Preprint">
+  </a>
+</p>
+
 This repository contains the files and code we used to prepare the CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis. 
 
 ## Folder structure 
