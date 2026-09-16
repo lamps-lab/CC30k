@@ -12,6 +12,10 @@
   <a href="https://huggingface.co/datasets/rochanaro/CC30k">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-FFD21E?style=flat-square&logoColor=black" alt="Hugging Face Dataset">
   </a>
+
+  <a href="https://doi.org/10.1109/JCDL67857.2025.00013">
+    <img src="https://img.shields.io/badge/DOI-10.1109/JCDL67857.2025.00013-blue?style=flat-square" alt="DOI">
+  </a>  
   
 </p>
 
