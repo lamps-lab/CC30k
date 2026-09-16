@@ -8,6 +8,11 @@
   <a href="https://arxiv.org/pdf/2511.07790">
     <img src="https://img.shields.io/badge/Preprint-arXiv-B31B1B?style=flat-square&logo=arxiv&logoColor=white" alt="Preprint">
   </a>
+  
+  <a href="https://huggingface.co/datasets/rochanaro/CC30k">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-FFD21E?style=flat-square&logoColor=black" alt="Hugging Face Dataset">
+  </a>
+  
 </p>
 
 This repository contains the files and code we used to prepare the CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis. 
@@ -121,15 +126,16 @@ Available inside `notebooks` directory.
 <!-- ## Citation ## -->
 
 ```BibTeX
-@misc{obadage2025cc30kcitationcontextsdataset,
-      title={CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis}, 
-      author={Rochana R. Obadage and Sarah M. Rajtmajer and Jian Wu},
-      year={2025},
-      eprint={2511.07790},
-      archivePrefix={arXiv},
-      primaryClass={cs.DL},
-      url={https://arxiv.org/abs/2511.07790}, 
-}
+@INPROCEEDINGS{11363696,
+  author={Obadage, Rochana R. and Rajtmajer, Sarah and Wu, Jian},
+  booktitle={2025 ACM/IEEE Joint Conference on Digital Libraries (JCDL)}, 
+  title={CC30k: A Citation Contexts Dataset for Reproducibility-Oriented Sentiment Analysis}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={20-29},
+  keywords={Crowdsourcing;Sentiment analysis;Pipelines;Machine learning;Predictive models;Reproducibility of results;Libraries;Reliability;Replicability;Tuning;Citations;Reproducibility;Replicability;Machine Learning;Classification;RAG;LLM Fine Tuning;Science of Science},
+  doi={10.1109/JCDL67857.2025.00013}}
 ```
 
 ```
